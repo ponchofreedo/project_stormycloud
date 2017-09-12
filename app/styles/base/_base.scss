@@ -1,0 +1,96 @@
+// bower:scss
+// endbower
+
+//@import "_meyer_reset";
+
+* {
+  box-sizing: border-box;
+}
+
+html, 
+body {
+  height: 100%;
+  height: 100vh;
+  margin: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /*
+  shamelessly poached from getskeleton.com.
+  this allows for 'desired size / 10' sizing in ems and rems. i.e, 1.5rem = 15px.
+  */
+  font-size: 62.5%;
+}
+
+body {
+  background: $white;
+  font-family: $aktiv;
+  @include color($black, color);
+  font-size: 1em;
+  line-height: 1.4;
+  font-weight: $regular;
+  font-style: default;
+  overflow-x: hidden;
+  @include respond(all-phones) {
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@include hide-and-seek;
+
+.main-container {
+  float: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  @include respond(all-phones) {
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.max-container {
+  max-width: 160em;
+  margin: 0 auto;
+}
+
+.bottom-out {
+  bottom: 0;
+}
+
+article,
+footer,
+header,
+nav,
+section {
+  position: relative;
+  z-index: 2;
+  @include clearfix;
+}
+
+/* setting an icon size baseline */
+i {
+  font-size: 2.4em;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+.pos--rel {
+  position: relative;
+}
+
+.pos--abs {
+  position: absolute;
+}
+
+//@include color-classes('text', 'color');
+//@include color-classes('bg', 'background');
