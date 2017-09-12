@@ -27,7 +27,8 @@ h6 {
 
 p {
   font-weight: $regular;
-  font-size: $small-type;
+  font-size: $medium-type;
+  hyphens: none;
   &.next {
     margin-top: 0.5em;
   }
@@ -44,6 +45,13 @@ h1 {
 }
 
 h2 {
+  font-size: $stupidly-huge-type;
+  letter-spacing: -1.2px;
+  font-weight: $xbold;
+  line-height: 1.0em;
+}
+
+h3 {
   font-size: $really-huge-type;
   letter-spacing: -1.2px;
   font-weight: $xbold;
@@ -55,4 +63,11 @@ h4 {
   letter-spacing: -2px;
   line-height: 1.2em;
   font-weight: $regular;
+}
+
+h5 {
+  font-size: $larger-type;
+  letter-spacing: -1px;
+  line-height: 1em;
+  font-weight: $xbold;
 }
