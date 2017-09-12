@@ -39,5 +39,8 @@
         "single"
       ]
     }
+  },
+  "dependencies": {
+    "normalize.css": "^7.0.0"
   }
 }

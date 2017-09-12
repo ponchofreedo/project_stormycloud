@@ -1,0 +1,63 @@
+// bower:scss
+// endbower
+
+// responsive helpers
+$min-device-width: 320px;
+$tablet-device-width: 768px;
+$ambiguous-value: 960px;
+$document-width: 1440px;
+
+// color definitions
+$black:   #363636;
+$gray-1:  #48525c;
+$gray-2:  #6c7a88;
+$gray-3:  #b4b7c2;
+$gray-4:  #dcdce0;
+$gray-5:  #ebeef5;
+$gray-6:  #f5f7fa;
+$green-1: #0fa36d;
+$green-2: #13e296;
+$orange:  #f78824;
+$white:	  #ffffff;
+
+// color mixin experiment stuff
+$theme-colors: (
+  black:  $black,
+  gray-1: $gray-1,
+  gray-2: $gray-2,
+  gray-3: $gray-3,
+  gray-4: $gray-4,
+  gray-5: $gray-5,
+  gray-6: $gray-6,
+  green-1:$green-1,
+  green-2:$green-2,
+  orange: $orange,
+  white:  $white
+);
+
+// color extensions have (officially) been replaced by a mixin in the utils directory
+
+// font family
+$aktiv: 'aktiv-grotesk', 'Helvetica Neue', sans-serif;
+//$icon-font: 'icomoon';
+
+// font-sizing
+// all font sizes are based off the diatonic scals @ ty-p.cc
+// values converted into em's to make my life a bit easier
+$ludicrous-type:      25.6em;   // (Ludicrous)
+$stupidly-huge-type:  16.0em;   // (Stupidly Huge)
+$hugest-type:	  	    9.6em;    // (Inch)
+$really-huge-type:	  8.0em;    // (Five Line Pica)
+$huger-type:          6.2em;    // (Canon)
+$huge-type:           4.8em;    // (Double Great Primer)
+$larger-type:         3.2em;    // (Double Pica)
+$large-type:          2.8em;    // (Double Small Pica)
+$medium-type:         2.4em;    // (Great Primer)
+$small-type:          2.1em;    // (Columbian)
+$default-font-size:   1.9em;    // baseline size (English), used for em/rem sizing
+$smaller-type:        1.6em;    // (Pica)
+
+// font-weighting
+$regular: 300;        // regular
+$bold: 600;           // bold
+$xbold: 800;          // extra bold

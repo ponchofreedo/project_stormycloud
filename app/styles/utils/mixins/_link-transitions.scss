@@ -1,0 +1,6 @@
+// bower:scss
+// endbower
+
+@mixin transition($property, $time, $style) {
+  transition: $property $time $style;
+}

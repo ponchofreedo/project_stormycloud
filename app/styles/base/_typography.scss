@@ -1,0 +1,58 @@
+// bower:scss
+// endbower
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  vertical-align: baseline;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+  b {
+    font-weight: $xbold;
+  }
+}
+
+p {
+  font-weight: $regular;
+  font-size: $small-type;
+  &.next {
+    margin-top: 0.5em;
+  }
+  b {
+    font-weight: $bold;
+  }
+}
+
+h1 {
+  font-size: $ludicrous-type;
+  letter-spacing: -1.6px;
+  line-height: 1.0em;
+  font-weight: $xbold;
+}
+
+h2 {
+  font-size: $really-huge-type;
+  letter-spacing: -1.2px;
+  font-weight: $xbold;
+  line-height: 1.0em;
+}
+
+h4 {
+  font-size: $huge-type;
+  letter-spacing: -2px;
+  line-height: 1.2em;
+  font-weight: $regular;
+}

@@ -1,0 +1,9 @@
+// bower:scss
+// endbower
+
+@mixin vertical-align($position, $displacement) {
+  position: $position;
+  top: $displacement;
+  transform: translateY(-#{$displacement}) perspective(1px);
+  transform-style: preserve-3d;
+}

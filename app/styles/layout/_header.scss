@@ -1,0 +1,29 @@
+// bower:scss
+// endbower
+
+header {
+	display: block;
+	/*margin: 0 1.6em;*/
+	z-index: 10;
+	width: 100%;
+	padding-top: 6.4em;
+	&.header--trans {
+		background-color: transparent;
+	}
+	&.header--green {
+		background-color: $green-2;
+	}
+	@include respond(all-phones) {
+		margin: 0;
+		min-width: 0;
+  	}
+  	nav {
+  		display: block;
+  		span {
+  			font-size: 1.9em;
+  		}
+  		span + span {
+  			display: block;
+  		}
+  	}
+}

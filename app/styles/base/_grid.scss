@@ -1,0 +1,134 @@
+// bower:scss
+// endbower
+
+.grid {
+  width: 100%;
+  position: relative;
+  zoom: 1;
+  @include respond(super-desktop) {
+    padding: 0;
+  }
+}
+.grid--row {
+  width: 100%;
+  margin: 0 auto;
+  @include clearfix;
+}
+
+.grid > [class*="stretch-"] {
+  float: left;
+  min-height: 1px;
+  box-sizing: border-box;
+  padding: 0 1.6em;
+  display: inline-block;
+  &.lefty {
+    margin-left: 0;
+  }
+  &.righty {
+    float: right;
+  }
+  ~ [class*="stretch-"] {
+    display: inline-block;
+  }
+  &.nudge-left {
+    padding-left: 3.2em;
+  }
+  &.nudge-right {
+    padding-right: 3.2em;
+  }
+  &.tap-left {
+    padding-left: 0;
+  }
+  &.tap-right {
+    padding-right: 0;
+  }
+}
+
+/*
+// easy way to pad the split columns
+@include respond(desktop) {
+  .bottle.koozie-left,
+  .bottles.koozie-left {
+    padding-left: 1.6em;
+  }
+  .bottle.koozie-right,
+  .bottles.koozie-right {
+    padding-right: 1.6em;
+  }
+}
+*/
+
+// creating the grid
+$min-num-cols: 1;
+$max-num-cols: 12;   // gonna try with 12 columns, even though the design was based on 12
+$grid-formula: 100% / $max-num-cols;
+
+/*@if $i == 1 {
+  $col-class-name: one;
+} @elseif $i == 2 {
+  $col-class-name: two;
+} @elseif $i == 3 {
+  $col-class-name: three;
+} @elseif $i == 4 {
+  $col-class-name: four;
+} @elseif $i == 5 {
+  $col-class-name: five;
+} @elseif $i == 6 {
+  $col-class-name: six;
+} @elseif $i == 7 {
+  $col-class-name: seven;
+} @elseif $i == 8 {
+  $col-class-name: eight;
+}*/
+
+
+// in case of emergency...
+/*@if $col-class-name == "ragnarock" {
+  @warn "something went wrong...ragnarock is clearly not right";
+}*/
+
+// create all the column classes
+@for $i from $min-num-cols through $max-num-cols {
+  .stretch-#{num-as-word($i)} {
+    width: $grid-formula * $i;
+  }
+}
+@for $j from $min-num-cols through $max-num-cols - 1 {
+  .push-#{num-as-word($j)} {
+    margin-left: $grid-formula * $j;
+  }
+}
+
+@include respond(all-phones) {
+  .grid > [class*="stretch-"] {
+    width: auto !important;
+    &.nudge-left {
+      padding-left: 0;
+    }
+    &.nudge-right {
+      padding-right: 0;
+    }
+    &.tap-left {
+      padding-left: 1.6em;
+    }
+    &.tap-right {
+      padding-right: 1.6em;
+    }
+  }
+
+  .lefty,
+  .righty {
+    float: none !important;
+  }
+
+  .nudge-left,
+  .nudge-right {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  [class^="push-"],
+  [class*="push-"] {
+    margin-left: 0 !important;
+  }
+}
