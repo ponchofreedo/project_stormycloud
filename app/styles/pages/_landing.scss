@@ -18,6 +18,9 @@
 			.big-bar {
 				background-color: $gray-6;
 				float: left;
+				//@include respond(super-desktop) {
+				//	width: 32%!important;
+				//}
 			}
 			.little-bar {
 				width: 1.6em;
@@ -29,7 +32,6 @@
 	#landing--hero,
 	#landing--work {
 		position: relative;
-		overflow: hidden;
 	}
 	#landing--hero {
 		padding-top: 16em;
@@ -59,6 +61,39 @@
 		}
 	}
 	#landing--work {
-		padding: 32em 0 16em;
+		padding: 32em 0 0;
+		article {
+			display: block;
+			margin-bottom: 16em;
+			h5 {
+				margin-bottom: 1em;
+			}
+			button {
+				margin-top: 3.2em;
+				margin-left: -2.4em;
+			}
+			span {
+				&.project--ip {
+					position: absolute;
+					font-size: $smaller-type;
+					font-weight: $xbold;
+					letter-spacing: -0.8px;
+					top: -1.6em;
+				}
+			}
+			.ghost {
+				width: 10000px;
+				top: -6em;
+				left: -6em;
+				z-index: -10;
+			}
+			.on-top {
+				z-index: 10;
+			}
+			&:last-child {
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+		}
 	}
 }

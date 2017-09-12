@@ -19,7 +19,7 @@
     @media only screen and (width: 1024px) and (height: 1366px) { @content; }
   }
   @else if $media == super-desktop {
-    @media only screen and (min-width: $document-width) { @content; }
+    @media only screen and (min-width: $super-document-width) { @content; }
   }
   @else {
     @media only screen and ('#{$media}') { @content; }
