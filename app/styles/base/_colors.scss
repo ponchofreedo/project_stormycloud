@@ -1,0 +1,12 @@
+// bower:scss
+// endbower
+
+/* Thank you Kelly Sutton @kellysutton.com */
+@each $color in $theme-colors {
+  .text--#{nth($color, 1)} {
+    color: nth($color, 2);
+  }
+  .bg--#{nth($color, 1)} {
+    background-color: nth($color, 2);
+  }
+}

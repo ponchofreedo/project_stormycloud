@@ -1,0 +1,27 @@
+// bower:scss
+// endbower
+
+// taken and adapted from gumby framework v2...credit to the guys from DigitalSurgeons
+@mixin respond($media) {
+  @if $media == portrait-phones {
+    @media only screen and (max-width: $min-device-width) { @content; }
+  }
+  @else if $media == landscape-phones {
+    @media only screen and (min-width: ($min-device-width)) and (max-width: ($tablet-device-width)) { @content; }
+  }
+  @else if $media == all-phones {
+    @media only screen and (max-width: ($tablet-device-width)) { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: $tablet-device-width) { @content; }
+  }
+  @else if $media == super-tablet {
+    @media only screen and (width: 1024px) and (height: 1366px) { @content; }
+  }
+  @else if $media == super-desktop {
+    @media only screen and (min-width: $document-width) { @content; }
+  }
+  @else {
+    @media only screen and ('#{$media}') { @content; }
+  }
+}

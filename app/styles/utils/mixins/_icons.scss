@@ -1,0 +1,15 @@
+// bower:scss
+// endbower
+
+@mixin icons {
+  @font-face {
+    font-family: '$icon-font';
+    src:  url('assets/fonts/icomoon.eot?ofb3cj');
+    src:  url('assets/fonts/icomoon.eot?ofb3cj#iefix') format('embedded-opentype'),
+      url('assets/fonts/icomoon.ttf?ofb3cj') format('truetype'),
+      url('assets/fonts/icomoon.woff?ofb3cj') format('woff'),
+      url('assets/fonts/icomoon.svg?ofb3cj#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
