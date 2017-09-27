@@ -1,6 +1,10 @@
 // bower:scss
 // endbower
 
+/*
+  Typography
+*/
+
 h1,
 h2,
 h3,
@@ -35,6 +39,9 @@ p {
   b {
     font-weight: $bold;
   }
+  @include respond(all-phones) {
+    font-size: $small-type;
+  }
 }
 
 h1 {
@@ -42,13 +49,16 @@ h1 {
   letter-spacing: -1.6px;
   line-height: 1.0em;
   font-weight: $xbold;
+  @include respond(all-phones) {
+    font-size: $hugest-type;
+  }
 }
 
 h2 {
   font-size: $stupidly-huge-type;
   letter-spacing: -1.2px;
   font-weight: $xbold;
-  line-height: 1.0em;
+  line-height: 1.2em;
 }
 
 h3 {
@@ -56,6 +66,10 @@ h3 {
   letter-spacing: -1.2px;
   font-weight: $xbold;
   line-height: 1.0em;
+  @include respond(all-phones) {
+    letter-spacing: -1px;
+    font-size: $larger-type;
+  }
 }
 
 h4 {
@@ -63,6 +77,11 @@ h4 {
   letter-spacing: -2px;
   line-height: 1.2em;
   font-weight: $regular;
+  @include respond(all-phones) {
+    letter-spacing: -1px;
+    line-height: 1.1em;
+    font-size: $larger-type;
+  }
 }
 
 h5 {
@@ -70,4 +89,6 @@ h5 {
   letter-spacing: -1px;
   line-height: 1em;
   font-weight: $xbold;
+  @include respond(all-phones) {
+  }
 }

@@ -1,7 +1,7 @@
 // bower:scss
 // endbower
 
-//@import "_meyer_reset";
+@import "_meyer_reset";
 
 * {
   box-sizing: border-box;
@@ -57,7 +57,7 @@ body {
 }
 
 .max-container {
-  max-width: 160em;
+  max-width: 158em;
   margin: 0 auto;
 }
 
@@ -77,7 +77,7 @@ section {
 
 /* setting an icon size baseline */
 i {
-  font-size: 2.4em;
+  font-size: 1.0em;
 }
 
 img {
@@ -92,5 +92,6 @@ img {
   position: absolute;
 }
 
+//These were replaced by a sass each generator in the _colors partial
 //@include color-classes('text', 'color');
 //@include color-classes('bg', 'background');

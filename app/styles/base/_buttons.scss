@@ -1,10 +1,13 @@
 // bower:scss
 // endbower
 
+/*
+  Buttons
+*/
+
 button {
   cursor: pointer;
   display: block;
-  min-width: 3.2em;
   font-family: inherit;
   background: none;
   border: none;
@@ -12,20 +15,20 @@ button {
   text-align: center;
   padding: 1.2em 1.8em;
   margin: 0;
-  @include link-transition(all, 0.2s, ease-in-out);
-  &.square {
-    padding: 0.8em 0.8em 0.7em;
-    border: 2px solid $ghost;
-    border-radius: 4px;
-    &:hover {
-      background-color: $ghost;
-      i {
-        transition-delay: 0.05s;
-        color: $green;
-      }
-    }
-  }
   &:active {
     outline: none;
+  }
+  &.stroked {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 4px;
+  }
+  &:hover {
+    i {
+      &.forward {
+        transform: translateX(8px);
+        padding-right: 4px;
+      }
+    }
   }
 }

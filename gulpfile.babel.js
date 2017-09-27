@@ -52,11 +52,12 @@ gulp.task('lint', lint('app/scripts/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
 gulp.task('html', ['styles', 'scripts'], () => {
-  return gulp.src('app/*.html')
+  return gulp.src(['app/*.html', 'app/*/*.html'])
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano()))
     .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
+    .pipe($.if('*/*.html', $.htmlmin({collapseWhitespace: true})))
     .pipe(gulp.dest('dist'));
 });
 
@@ -86,7 +87,8 @@ gulp.task('fonts', () => {
 gulp.task('extras', () => {
   return gulp.src([
     'app/*.*',
-    '!app/*.html'
+    '!app/*.html',
+    '!app/*/*.html'
   ], {
     dot: true
   }).pipe(gulp.dest('dist'));
@@ -108,6 +110,7 @@ gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
 
   gulp.watch([
     'app/*.html',
+    'app/*/*.html',
     '.tmp/scripts/**/*.js',
     'app/images/**/*',
     '.tmp/fonts/**/*'
