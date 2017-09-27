@@ -4,5 +4,28 @@
 section {
 	.section--title {
 		font-size: $default-font-size;
+		display: block;
+		&.title-bottom {
+			margin-bottom: 2.4em;
+		}
+		&.title-link { 
+			left: 0;
+			a {
+				display: block;
+				padding: 12px 0 11px;
+				margin: 0;
+			}
+		}
+		@include respond(all-phones) {
+			&.title-top {
+				margin-top: -4.8em;
+			}
+			&.title-bottom {
+				margin-bottom: -3.2em;
+			}
+			&.title-link {
+				padding-left: 16px;
+			}
+		}
 	}
 }

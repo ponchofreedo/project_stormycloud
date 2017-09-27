@@ -1,33 +1,93 @@
 // bower:scss
 // endbower
 
+/*
+	Layout / Footer 
+*/
+
 footer {
 	display: block;
 	padding: 10em 0 0;
 	margin-top: 32em;
 	vertical-align: bottom;
+	@include respond(super-desktop) {
+		.stretch-six {
+			&.shift-right-one {
+				margin-left: 3.2em;
+			}
+		}
+	}
+	@include respond(all-phones) {
+		margin-top: 16em;
+	}
+	
+	&.footer--landing {
+		h3 {
+			color: $green-2;
+		}
+		a {
+			&:hover {
+				border-bottom-color: $green-1;
+			}
+		}
+		a,
+		.copyright {
+			color: $green-1 !important;
+		}
+	}
+	&.footer--project {
+		h3 {
+			color: $gray-2;
+		}
+		a {
+			&:hover {
+				border-bottom-color: $black;
+			}
+		}
+		a,
+		.copyright {
+			color: $black;
+		}
+	}
 	.footer--container {
 		padding: 8em 0 1.6em;
-		background-color: $green-2;
+		@include respond(all-phones) {
+			padding: 3.2em 1.6em 1.6em;
+		}
+		&.muted {
+			background-color: $gray-2;
+		}
+		&.bright {
+			background-color: $green-2;
+		}
 	}
 	.ghost {
 		top: -15.0em;
-		left: 1.6em;
+		left: 0;
 		overflow: hidden;
+		@include respond(all-phones) {
+			top: -5.8em;
+		}
 	}
 	.copyright {
 		display: block;
 		clear: left;
 		padding-top: 6.4em;
 		padding-bottom: 1.6em;
-		padding-left: 1.6em;
+		@include respond(all-phones) {
+			padding-left: 0;
+		}
 	}
 	a {
-		color: $green-1 !important;
 		text-decoration: none;
 	}
 	p {
 		z-index: 30;
+		a {
+			border-bottom: 2px;
+			border-bottom-color: transparent;
+			border-bottom-style: solid;
+		}
 	}
 	span {
 		display: block;
@@ -36,10 +96,24 @@ footer {
 	ul {
 		display: inline-block;
 		font-size: $small-type;
-		color: $green-1;
 		font-weight: $bold;
 		li {
 			display: inline-block;
+			padding-top: 2px;
+			padding-bottom: 2px;
+			a {
+				border-bottom: 2px;
+				border-bottom-color: transparent;
+				border-bottom-style: solid;
+			}
+		}
+		@include respond(all-phones) {
+			margin-top: 2em;
+			li {
+				float: left;
+				margin-bottom: 0.4em;
+				width: 50% !important;
+			}
 		}
 	}
 }

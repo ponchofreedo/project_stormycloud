@@ -2,6 +2,10 @@
 // endbower
 
 nav {
+	-webkit-user-select: none;
+  	user-select: none;
+	justify-content: space-between;
+	z-index: 50;
 	dl,
 	ol,
 	ul {
@@ -15,7 +19,7 @@ nav {
 			display: inline-block;
 			float: left;
 			margin-right: 3em;
-			color: $gray-3;
+			color: inherit;
 			padding-bottom: 0.6em;
 			&.last {
 				margin-right: 0;
@@ -23,8 +27,8 @@ nav {
 			a {
 				display: block;
 				&:hover {
-					border-bottom-color: $green-2;
-					color: $green-2;
+					border-bottom-color: inherit;
+					color: inherit;
 				}
 			}
 		}

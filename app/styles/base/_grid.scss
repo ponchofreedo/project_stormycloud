@@ -1,6 +1,10 @@
 // bower:scss
 // endbower
 
+/* 
+  Grid System
+*/
+
 .grid {
   width: 100%;
   position: relative;
@@ -19,14 +23,8 @@
   float: left;
   min-height: 1px;
   box-sizing: border-box;
-  padding: 0 1.6em;
+  //padding: 0 1.6em;
   display: inline-block;
-  &.lefty {
-    margin-left: 0;
-  }
-  &.righty {
-    float: right;
-  }
   ~ [class*="stretch-"] {
     display: inline-block;
   }
@@ -42,6 +40,14 @@
   &.tap-right {
     padding-right: 0;
   }
+}
+
+.lefty {
+  margin-left: 0;
+  float: left;
+}
+.righty {
+  float: right;
 }
 
 /*
@@ -93,42 +99,58 @@ $grid-formula: 100% / $max-num-cols;
     width: $grid-formula * $i;
   }
 }
+.stretch-full {
+    width: 100%;
+}
 @for $j from $min-num-cols through $max-num-cols - 1 {
-  .push-#{num-as-word($j)} {
-    margin-left: $grid-formula * $j;
+  .shift-left-#{num-as-word($j)} {
+    margin-right: $grid-formula * $j;
+  }
+}
+@for $k from $min-num-cols through $max-num-cols - 1 {
+  .shift-right-#{num-as-word($k)} {
+    margin-left: $grid-formula * $k;
+  }
+}
+@for $l from $min-num-cols through $max-num-cols - 1 {
+  .pad-left-#{num-as-word($l)} {
+    padding-left: $grid-formula * $l;
+  }
+}
+@for $m from $min-num-cols through $max-num-cols - 1 {
+  .pad-right-#{num-as-word($m)} {
+    padding-right: $grid-formula * $m;
   }
 }
 
 @include respond(all-phones) {
-  .grid > [class*="stretch-"] {
-    width: auto !important;
-    &.nudge-left {
-      padding-left: 0;
-    }
-    &.nudge-right {
-      padding-right: 0;
-    }
-    &.tap-left {
-      padding-left: 1.6em;
-    }
-    &.tap-right {
-      padding-right: 1.6em;
-    }
+  .grid > [class*="stretch-"],
+  [class*="stretch-"] {
+    width: 100%;
   }
-
-  .lefty,
-  .righty {
-    float: none !important;
+  .grid > [class*="shift-left-"],
+  [class*="shift-left-"] {
+    margin-right: 0;
   }
-
-  .nudge-left,
-  .nudge-right {
+  .grid > [class*="shift-right-"],
+  [class*="shift-right-"] {
+    margin-left: 0;
+  }
+  .grid > [class*="pad-left-"],
+  [class*="pad-left-"] {
     padding-left: 0;
+  }
+  .grid > [class*="pad-right-"],
+  [class*="pad-right-"] {
     padding-right: 0;
   }
+}
 
-  [class^="push-"],
-  [class*="push-"] {
-    margin-left: 0 !important;
+@include respond(all-phones) {
+  .lefty,
+  .righty {
+    &.override {
+      float: none !important;
+    }
   }
 }

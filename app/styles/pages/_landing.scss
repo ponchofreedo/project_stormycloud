@@ -29,17 +29,28 @@
 			}
 		}
 	}
-	#landing--hero,
-	#landing--work {
-		position: relative;
-	}
-	#landing--hero {
-		padding-top: 16em;
+	#landing--main--hero {
+		padding-top: 24em;
+		@include respond(all-phones) {
+			padding-top: 12em;
+			padding-left: 1.6em;
+			padding-right: 1.6em;
+			h4 {
+				margin-top: 1em;
+			}
+		}
 		.ghost {
-			top: -9em;
-			left: -5em;
+			top: -8em;
+			left: 8em;
 			z-index: -10;
 			line-height: 1em;
+			@include respond(all-phones) {
+				top: -8em;
+				left: 0em;
+				padding-bottom: 2em;
+				overflow-x: hidden;
+				display: block;
+			}
 		}
 		.on-top {
 			z-index: 10;
@@ -50,27 +61,136 @@
 			margin-top: 2.4em;
 			margin-bottom: -0.8em;
 			padding: 1em 0;
+			&:hover {
+				i {
+					transform: translateX(8px);
+				}
+			}
 		}
 		p {
 			padding-top: 2em;
-			//font-size: $medium-type;
 			letter-spacing: -0.24px;
+			@include respond(all-phones) {
+				padding-top: 1em;
+			}
 		}
 		a {
 			color: $green-2;
 		}
 	}
-	#landing--work {
+	#landing--inner--hero {
+		padding-top: 24em;
+		@include respond(all-phones) {
+			padding-top: 12em;
+			padding-left: 1.6em;
+			padding-right: 1.6em;
+			h4 {
+				margin-top: 1em;
+			}
+		}
+		.ghost {
+			vertical-align: bottom;
+			bottom: -1.12em;
+			z-index: -10;
+			overflow: hidden;
+			@include respond(all-phones) {
+				top: 2.08em;
+				left: 0;
+				padding-bottom: 1em;
+				overflow-x: hidden;
+				display: block;
+				width: 10000px;
+			}
+		}
+		p {
+			padding-bottom: 2em;
+			letter-spacing: -0.24px;
+			@include respond(all-phones) {
+				padding-top: 1em;
+			}
+		}
+		a {
+			color: $black;
+		}
+	}
+	#landing--main--content {
 		padding: 32em 0 0;
+		.landing--main--content-section-titles {
+			height: 100%;
+			display: inline-block;
+			@include respond(all-phones) {
+				display: block;
+				padding-top: 0;
+				padding-left: 1.6em;
+				padding-right: 1.6em;
+			}
+		}
 		article {
-			display: block;
+			display: inline-block;
 			margin-bottom: 16em;
+			&:first-of-type {
+				margin-top: -4.8em;
+			}
+			@include respond(all-phones) {
+				margin-bottom: 8em;
+			}
+			a {
+				background-color: transparent;
+				display: block;
+				cursor: default;
+				padding-top: 4.8em;
+				padding-bottom: 3.2em;
+				&:hover {
+					background-color: $green-2;
+					h2,
+					h5,
+					p {
+						color: $white;
+					}
+					.project--ip {
+						color: $green-1;
+					}
+					button {
+						border-color: $white;
+						background-color: transparent;
+						color: $white;
+					}
+				}
+				@include respond(all-phones) {
+					padding: 3.2em 1.6em;
+				}
+			}
+			h2 {
+				color: $gray-5;
+				background: linear-gradient(to right, $gray-5, $white, $white 30%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
 			h5 {
 				margin-bottom: 1em;
 			}
 			button {
 				margin-top: 3.2em;
 				margin-left: -2.4em;
+				color: $green-2;
+				font-weight: $bold;
+				transition: 0.16s ease;
+				&:hover {
+					transform: translateX(2.4em);
+					border-color: transparent;
+					background-color: $white;
+					i {
+
+					}
+				}
+				@include respond(all-phones) {
+					margin-left: 0;
+					&:hover {
+						transform: none;
+						border-color: inherit;
+						background-color: inherit;
+					}
+				}
 			}
 			span {
 				&.project--ip {
@@ -83,8 +203,8 @@
 			}
 			.ghost {
 				width: 10000px;
-				top: -6em;
-				left: -6em;
+				top: -8em;
+				left: 8em;
 				z-index: -10;
 			}
 			.on-top {
@@ -93,6 +213,47 @@
 			&:last-child {
 				margin-bottom: 0;
 				padding-bottom: 0;
+			}
+		}
+		.section--title {
+			&.title-link {
+				@include transition(background-color, 0.16s, ease);
+				font-size: 14px;
+				&:hover {
+					background-color: $gray-1;
+					color: $white;
+				}
+				a {
+					&:hover {
+						i {
+							transform: translateX(8px);
+						}
+					}
+				}
+				@include respond(all-phones) {
+					font-size: 2.4em;
+					font-weight: $xbold;
+					background-color: transparent;
+					&:hover {
+						color: inherit;
+						background-color: transparent;
+					}
+				}
+			}
+		}
+	}
+	#landing--main--hero,
+	#landing--inner--hero,
+	#landing--main-content {
+		position: relative;
+	}
+	@include respond(super-desktop) {
+		header,
+		footer {
+			.stretch-six {
+				&.push-one {
+					margin-left: 3.2em;
+				}
 			}
 		}
 	}
