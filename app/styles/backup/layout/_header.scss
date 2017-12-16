@@ -1,0 +1,239 @@
+// bower:scss
+// endbower
+
+/*
+	Layout / Header
+*/
+header {
+	display: block;
+	/*margin: 0 1.6em;*/
+	z-index: 10;
+	width: 100%;
+	padding-top: 6.4em;
+	@include respond(super-desktop) {
+		.stretch-six {
+			&.shift-right-one {
+				margin-left: 3.2em;
+			}
+		}
+	}
+	@include respond(all-phones) {
+		padding-top: 3.2em;
+	}
+	&.header--trans {
+		background-color: transparent;
+		nav,
+		span {
+			color: $gray-1;
+		}
+		nav li a {
+			color: $gray-1;
+			&:hover {
+				border-bottom-color: $gray-1;
+			}
+		}
+		a span + span {
+			color: $gray-1;
+			opacity: 0.6;
+		}
+	}
+	&.header--gray {
+		background-color: $gray-2;
+		nav,
+		span {
+			color: $black;
+		}
+		#name-title {
+			a {
+				border-bottom: none!important;
+				span + span {
+					color: $black;
+					opacity: 0.8;
+				}
+			}
+		}
+		.show-me-nav {
+			span {
+				background: $gray-1;
+			}
+		}
+		@include respond(desktop) {
+			nav a {
+				&:hover {
+					border-bottom-color: $black;
+				}
+			}
+		}
+		@include respond(all-phones) {
+			.nav--container {
+				li {
+					a {
+						&:hover {
+							background-color: $black;
+							color: $white;
+						}
+					}
+				}
+				.nav--social {
+					a {
+						color: $gray-1;
+						&:hover {
+							color: $black;
+							border-color: $black;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.header--green {
+		background-color: $green-2;
+		nav,
+		span {
+			color: $green-1;
+		}
+		nav a {
+			&:hover {
+				border-bottom-color: $green-1;
+			}
+		}
+		span + span {
+			color: $green-1;
+			opacity: 0.8;
+		}
+	}
+	#name-title {
+		a {
+			display: inline-block;
+		}
+	}
+	nav {
+  		display: block;
+  		padding: 0;
+  		span {
+  			font-size: 1.9em;
+  			@include respond(all-phones) {
+  				padding-left: 16px;
+  			}
+  		}
+  		span + span {
+  			display: block;
+  		}
+  	}
+	.show-me-nav {
+		display: none;
+		position: relative;
+		z-index: 1;
+		input {
+			display: block;
+			width: 44px;
+			height: 44px;
+			margin: 0;
+			position: absolute;
+			cursor: pointer;
+			opacity: 0; /* hide this */
+			z-index: 2; /* and place it over the hamburger */
+			-webkit-touch-callout: none;
+			&:checked ~ span {
+				opacity: 1;
+				&:nth-child(2) {
+					transform: rotate(-45deg) translate(-8px, 0px);
+				}
+				&:nth-child(3) {
+					transform: rotate(45deg) translate(-16px, -16px);
+				}
+			}
+		}
+		span {
+			display: block;
+			width: 44px;
+			height: 4px;
+			margin-top: 18px;
+			position: relative;
+			background: $gray-4;
+			border-radius: 3px;
+			z-index: 1;
+			transition: transform 0.2s ease,
+						background 0.2s ease,
+						opacity 0.2s ease;
+			&:first-child {
+				transform-origin: 100% 0%;
+			}
+			&:last-child {
+				transform-origin: 0% 100%;
+				margin-top: 8px;
+			}
+		}
+	}
+	.nav--social {
+  		display: none;
+  	}
+	@include respond(all-phones) {
+		margin: 0;
+		min-width: 0;
+		.nav--control {
+			display: block;
+			padding: 0!important;
+			width: 100% !important;
+		}
+		ul {
+			display: none;
+		}
+		.nav--container {
+			margin-bottom: 4em;
+			li {
+				display: block;
+				width: 100%;
+				padding: 0;
+				margin: 0;
+				font-size: $smaller-type;
+				&:last-of-type {
+					margin-bottom: 1.6em;
+				}
+				a {
+					display: block;
+					padding: 0.4em 16px;
+					border: none !important;
+					background: transparent;
+					@include transition(all, 0.2s, ease-in-out);
+					&:hover {
+						border: none !important;
+						background-color: $green-2;
+						color: $white;
+					}
+				}
+			}
+			.nav--social {
+				display: block;
+				clear: left;
+				margin-bottom: 8em;
+				a {
+					display: inline-block;
+					width: 50%;
+					color: $gray-3;
+					padding: 0.4em 16px;
+					border-bottom: 2px solid transparent;
+					&:nth-child(even) {
+						float: right;
+					}
+					&:nth-child(odd) {
+						float: left;
+					}
+					&:hover {
+						color: $green-2;
+						border-color: $green-2;
+					}
+				}
+			}
+		}
+		.show-me-nav {
+			display: inline-block;
+			float: right;
+			top: -52px;
+			right: 1.6em;
+		}
+		form:valid ~ ul {
+			display: block;
+		}
+  	}
+}

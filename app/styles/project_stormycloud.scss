@@ -7,18 +7,17 @@
 @import "vars/vars";
 @import "utils/utils";
 
-// bourbon imports
-// @import "bourbon/bourbon";
+// removed bourbon...unnecessary for this project
+
+// stimpleton import
+@import "vendor/stimpleton/stimpleton";
 
 // "parent" file imports
 @import "base/base";
-@import "base/colors";
 @import "base/typography";
 @import "base/icons";
-@import "base/links";
-@import "base/lists";
-@import "base/buttons";
-@import "base/grid";
+@import "base/buttons_and_links";
 @import "layout/layout";
 @import "pages/pages";
-@import "vendor/ionicons";
+@import "base/colors";
+@import "vendor/ionicons/ionicons";

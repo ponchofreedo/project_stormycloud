@@ -17,3 +17,7 @@
     border-color: nth($color, 2);
   }
 }
+
+.bg--trans {
+  background-color: transparent!important;
+}

@@ -13,22 +13,28 @@ button {
   border: none;
   float: none;
   text-align: center;
-  padding: 1.2em 1.8em;
+  padding: 1rem 1.6em;
   margin: 0;
-  &:active {
+  
+  &:active,
+  &:focus {
     outline: none;
   }
+  
+  &:hover {
+  
+    i {
+  
+      &.forward {
+        transform: translateX(0.8rem);
+        padding-right: 0.8rem;
+      }
+    }
+  }
+
   &.stroked {
     border-width: 2px;
     border-style: solid;
     border-radius: 4px;
-  }
-  &:hover {
-    i {
-      &.forward {
-        transform: translateX(8px);
-        padding-right: 4px;
-      }
-    }
   }
 }

@@ -1,0 +1,21 @@
+// bower:scss
+// endbower
+
+// so i dont have do define a bunch of extra extensions, so i can be a bit lazier
+@mixin color($variable, $type) {
+  @if $type == color {
+    color: $variable;
+  }
+  @elseif $type == background-color {
+    background-color: $variable;
+  }
+}
+
+// its not necessarily redundant with the code above...but it adds an extra layer of complexity, should i need it
+@mixin color-classes($color-prefix, $property) {
+  @each $color-name, $theme-color in $theme-colors {
+    .#{$color-prefix}-#{$color-name} {
+      #{$property}: $theme-color
+    }
+  }
+}

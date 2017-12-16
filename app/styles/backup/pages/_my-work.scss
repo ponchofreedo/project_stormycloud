@@ -1,0 +1,11 @@
+// bower:scss
+// endbower
+
+.bg--gray-2 {
+	p a {
+		color: $black;
+		&:hover {
+			border-bottom-color: $black;
+		}
+	}
+}
