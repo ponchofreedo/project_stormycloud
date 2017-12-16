@@ -1,10 +1,19 @@
 // bower:scss
 // endbower
 
-@import "_meyer_reset";
+// base ---------------------------------------
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  // using math so that it is flexible depending on the base-value definition in vars/_vars
+  font-size: ((10 / $base-value) * 100) + %;
 }
 
 html, 
@@ -14,32 +23,45 @@ body {
   margin: 0;
 }
 
-html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  /*
-  shamelessly poached from getskeleton.com.
-  this allows for 'desired size / 10' sizing in ems and rems. i.e, 1.5rem = 15px.
-  */
-  font-size: 62.5%;
-}
-
 body {
-  background: $white;
-  font-family: $aktiv;
+  font-family: $primary-font-family;
+  font-size: $text-sz-baseline;
+  font-weight: $text-wt-regular;
+  line-height: 1.24;
   color: $black;
-  font-size: 1em;
-  line-height: 1.4;
-  font-weight: $regular;
+  background: $white;
   font-style: default;
   overflow-x: hidden;
-  @include respond(all-phones) {
+
+  @include respond(phone) {
     -webkit-text-size-adjust: none;
     -ms-text-size-adjust: none;
     width: 100%;
     min-width: 0;
   }
+}
+
+article,
+footer,
+header,
+nav,
+section {
+  position: inherit;
+  z-index: 1;
+  @include clearfix;
+}
+
+#landing,
+#work,
+#blog,
+#contact {
+  @include respond(phone) {
+    width: 100%;
+  }
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
 }
 
 @include hide-and-seek;
@@ -49,49 +71,49 @@ body {
   margin: 0 auto;
   padding: 0;
   width: 100%;
-  @include respond(all-phones) {
+  
+  @include respond(phone) {
     min-width: 0;
     margin-left: 0;
     margin-right: 0;
   }
 }
 
-.max-container {
-  max-width: 158em;
-  margin: 0 auto;
+.content-container {
+  @include respond(super-desktop) {
+    max-width: 144rem;
+    margin: 0 auto;
+  }
 }
 
-.bottom-out {
+
+.top {
+  top: 0;
+}
+
+.bottom {
   bottom: 0;
-}
-
-article,
-footer,
-header,
-nav,
-section {
-  position: relative;
-  z-index: 2;
-  @include clearfix;
-}
-
-/* setting an icon size baseline */
-i {
-  font-size: 1.0em;
-}
-
-img {
-  -ms-interpolation-mode: bicubic;
-}
-
-.pos--rel {
-  position: relative;
 }
 
 .pos--abs {
   position: absolute;
 }
 
-//These were replaced by a sass each generator in the _colors partial
-//@include color-classes('text', 'color');
-//@include color-classes('bg', 'background');
+.pos--rel {
+  position: relative;
+}
+
+.no-pad-lr {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+%behind {
+  position: absolute;
+  z-index: 4;
+  top: 0;
+}
+
+%in-front {
+  z-index: 5;
+}

@@ -1,30 +1,248 @@
 // bower:scss
 // endbower
 
-section {
-	.section--title {
-		font-size: $default-font-size;
+.main--content {
+	display: block;
+	margin-bottom: 24rem;
+
+	@include respond(tablet) {
+		padding-left: ((1 / 12) * 100) + %!important;
+		padding-right: ((1 / 12) * 100) + %!important;
+	}
+
+	.hero--main {
+		padding-top: 6rem;
+
+		&.hero--main-landing {
+			padding-top: 16rem;
+			margin-bottom: 24rem;
+
+			@include respond(tablet) {
+				padding-top: 10rem;
+				margin-bottom: 20rem;
+			}
+
+			@include respond(phone) {
+				padding-top: 4rem;
+				margin-bottom: 16rem;
+			}
+		}
+
+		h1 {
+			line-height: 0.8;
+			@extend %behind;
+			margin-top: -5.6rem;
+			margin-left: -5.6rem;
+
+			@include respond(tablet) {
+				margin-top: -3.6rem;
+				margin-left: -3.6rem;
+			}
+
+			@include respond(phone) {
+				position: relative;
+				margin-top: 0;
+				margin-left: -1.6rem;
+				padding: 1.6rem 0 2.4rem;
+			}
+
+			+ div {
+				@extend %in-front;
+			}
+		}
+
+		h4 {
+			margin-bottom: 3.2rem;
+			padding-right: 16%;
+
+			@include respond(phone) {
+				padding-right: 0;
+			}
+		}
+
+		p {
+			font-size: $text-sz-h-small;
+			color: $gray-2;
+			margin-bottom: 3.2rem;
+
+			+ p {
+				color: $green-2;
+			}
+
+			@include respond(tablet) {
+				font-size: $text-sz-body;
+			}
+		}
+	}
+
+	.section--header-small {
 		display: block;
-		&.title-bottom {
-			margin-bottom: 4.7em;
+		margin-bottom: 4rem;
+	}
+
+	.project--container {
+		padding: 6.4rem 0;
+		position: relative;
+		margin-bottom: 4rem;
+	}
+
+	.project--content {
+
+		header *,
+		p,
+		button {
+			transition: all 0.16s ease;
 		}
-		&.title-link { 
-			left: 0;
+
+		header {
+			position: relative;
+		}
+
+		h2 { 
+			width: 10000px;
+			overflow: hidden;
+			color: $gray-5;
+			@extend %behind;
+			margin-top: -8rem;
+			margin-left: -5.6rem;
+			opacity: 1.0;
+
+			@include respond(tablet) {
+				margin-left: -3.6rem;
+			}
+
+			@include respond(phone) {
+				display: none;
+			}
+		}
+		
+		span {
+			top: -3.2rem;
+			font-size: $text-sz-baseline;
+			font-weight: $text-wt-xbold;
+
+			@include respond(phone) {
+				top: -2.4rem;
+			}
+		}
+
+		h5 {
+			margin-bottom: 3.2rem;
+
+			@include respond(tablet) {
+				margin-bottom: 2.4rem;
+			}
+		}
+
+		p {
+			margin-bottom: 3.2rem;
+			font-size: $text-sz-h-small;
+
+			@include respond(tablet) {
+				font-size: $text-sz-body;
+			}
+		}
+
+		button {
+			font-size: 1.4rem;
+			font-weight: $text-wt-bold;
+			margin-left: -2.4rem;
+
+			&:hover {
+        transform: translateX(2.4rem);
+        padding-right: 1.2rem;
+      }
+
+      @include respond(phone) {
+      	margin-left: 0;
+
+      	&:hover {
+      		transform: none;
+      		padding-right: inherit;
+
+      		i {
+      			transform: none;
+      		}
+      	}
+      }
+		}
+
+		span,
+		h5,
+		p,
+		button {
+			@extend %in-front;
+		}
+
+		a {
+
+			&:hover {
+			
+				h2 {
+					opacity: 0.4;
+				}
+			}
+		}
+
+		&.project--content-white {
+			
+			h2 {
+				color: $gray-5;
+			}
+
+			h5 {
+				color: $gray-1;
+			}
+
+			p {
+				color: $gray-2;
+			}
+
 			a {
-				display: block;
-				padding: 12px 0 11px;
-				margin: 0;
+
+				&:hover {
+
+					h5,
+					p,
+					span {
+						color: $green-2;
+					}
+					
+					> button {
+						border-color: $green-2;
+					}
+				}
 			}
 		}
-		@include respond(all-phones) {
-			&.title-top {
-				margin-top: -4em;
+
+		&.project--content-gray {
+			
+			h2 {
+				color: $gray-5;
 			}
-			&.title-bottom {
-				margin-bottom: -3.2em;
+
+			h5 {
+				color: $gray-1;
 			}
-			&.title-link {
-				padding-left: 16px;
+
+			p {
+				color: $gray-2;
+			}
+
+			a {
+
+				&:hover {
+
+					h5,
+					p,
+					span {
+						color: $gray-2;
+					}
+					
+					> button {
+						border-color: $gray-2;
+					}
+				}
 			}
 		}
 	}

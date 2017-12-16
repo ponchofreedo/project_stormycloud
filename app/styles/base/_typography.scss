@@ -12,7 +12,6 @@ h4,
 h5,
 h6,
 p {
-  vertical-align: baseline;
   padding: 0;
   margin: 0;
 }
@@ -24,71 +23,85 @@ h4,
 h5,
 h6 {
   display: block;
-  b {
-    font-weight: $xbold;
-  }
-}
 
-p {
-  font-weight: $regular;
-  font-size: $medium-type;
-  hyphens: none;
-  &.next {
-    margin-top: 0.5em;
-  }
   b {
-    font-weight: $bold;
-  }
-  @include respond(all-phones) {
-    font-size: $small-type;
+    font-weight: $text-wt-xbold;
   }
 }
 
 h1 {
-  font-size: $ludicrous-type;
-  letter-spacing: -1.6px;
-  line-height: 1.0em;
-  font-weight: $xbold;
-  @include respond(all-phones) {
-    font-size: $hugest-type;
+  font-size: $text-sz-h-ludicrous;
+  letter-spacing: -0.8rem;
+  line-height: 1.0;
+  font-weight: $text-wt-xbold;
+  
+  @include respond(tablet) {
+    font-size: $text-sz-h-stupid;
+  }
+  
+  @include respond(phone) {
+    font-size: $text-sz-h-huge;
+    letter-spacing: -0.4rem;
   }
 }
 
 h2 {
-  font-size: $stupidly-huge-type;
-  letter-spacing: -1.2px;
-  font-weight: $xbold;
-  line-height: 1.2em;
+  font-size: $text-sz-h-stupid;
+  letter-spacing: -0.4rem;
+  font-weight: $text-wt-xbold;
+  line-height: 1.2;
 }
 
 h3 {
-  font-size: $really-huge-type;
-  letter-spacing: -1.2px;
-  font-weight: $xbold;
-  line-height: 1.0em;
-  @include respond(all-phones) {
+  font-size: $text-sz-h-huge;
+  letter-spacing: -0.32rem;
+  font-weight: $text-wt-xbold;
+  line-height: 1.0;
+  @include respond(phone) {
     letter-spacing: -1px;
-    font-size: $larger-type;
+    font-size: $text-sz-h-large;
   }
 }
 
 h4 {
-  font-size: $huge-type;
-  letter-spacing: -2px;
-  line-height: 1.2em;
-  font-weight: $regular;
-  @include respond(all-phones) {
-    letter-spacing: -1px;
-    line-height: 1.1em;
-    font-size: $larger-type;
+  font-size: $text-sz-h-larger;
+  letter-spacing: -0.08rem;
+  line-height: 1.2;
+  font-weight: $text-wt-regular;
+  @include respond(tablet) {
+    font-size: $text-sz-h-large;
   }
 }
 
 h5 {
-  font-size: $larger-type;
-  letter-spacing: -1px;
-  line-height: 1em;
-  font-weight: $xbold;
-  @include respond(all-phones) {
+  font-size: $text-sz-h-large;
+  letter-spacing: -0.08rem;
+  line-height: 1.0;
+  font-weight: $text-wt-xbold;
+}
+
+h6 {
+  font-size: $text-sz-body;
+  line-height: 1.0;
+  font-weight: $text-wt-regular;
+
+  @include respond(tablet) {
+    font-size: $text-sz-baseline;
   }
 }
+
+p {
+  font-weight: $text-wt-regular;
+  font-size: $text-sz-body;
+  hyphens: none;
+  
+  &.next {
+    margin-top: 3.2rem;
+  }
+
+  @include respond(tablet) {
+    font-size: $text-sz-baseline;
+  }
+}
+
+@import "../vendor/stimpleton/system/_typography";

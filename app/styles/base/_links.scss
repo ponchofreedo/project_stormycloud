@@ -10,15 +10,18 @@ a {
   background-color: none;
   color: inherit;
   font-weight: inherit;
-  border-bottom: 2px solid transparent;
+  border-bottom: 0.2rem solid transparent;
   transition: all 0.16s ease;
+
   &:focus {
     outline: 0;
   }
+
   &:visited {
     text-decoration: none;
     color: inherit;
   }
+
   i {
     display: inline-block;
     transition: transform 0.16s ease;
@@ -28,7 +31,8 @@ a {
 p a {
   color: inherit;
   text-decoration: inherit;
-  font-weight: $bold;
+  font-weight: $text-wt-bold;
+  
   &:hover {
     border-bottom-color: inherit;
   }

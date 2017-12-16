@@ -1,0 +1,112 @@
+// bower:scss
+// endbower
+
+/*
+  Buttons
+*/
+
+// bower:scss
+// endbower
+
+/*
+  Links
+*/
+
+a {
+  text-decoration: none;
+  background-color: none;
+  color: inherit;
+  font-weight: inherit;
+  border-bottom: 0.2rem solid transparent;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  i {
+    display: inline-block;
+  }
+}
+
+p a {
+  color: inherit;
+  text-decoration: inherit;
+  font-weight: $text-wt-bold;
+  
+  &:hover {
+    border-bottom-color: inherit;
+  }
+}
+
+button {
+  cursor: pointer;
+  display: block;
+  font-family: inherit;
+  background: none;
+  border: none;
+  float: none;
+  text-align: center;
+  padding: 1.6rem 1.6em;
+  margin: 0;
+  
+  &:active,
+  &:focus {
+    outline: none;
+  }
+  
+  &:hover {
+  
+    i {
+  
+      &.forward {
+        transform: translateX(0.8rem);
+        padding-right: 0.8rem;
+      }
+    }
+  }
+
+  &.button--stroked {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 4px;
+  }
+
+  &.button--gray {
+    color: $gray-2;
+
+    &:hover {
+      color: $white;
+      background: $gray-2;
+      border-color: $gray-2;
+
+      i {
+        color: $white;
+      }
+    }
+  }
+
+  &.button--green {
+    color: $green-2;
+
+    &:hover {
+      color: $white;
+      background: $green-2;
+      border-color: $green-2;
+
+      i {
+        color: $white;
+      }
+    }
+  }
+}
+
+a,
+button,
+i {
+  transition: all 0.16s ease;
+}

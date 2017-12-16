@@ -1,0 +1,47 @@
+// bower:scss
+// endbower
+
+// type ---------------------------------------
+
+p {
+  line-height: 1.6;
+  
+  + p {
+    margin-top: $margin-base-value * 2;
+  }
+}
+
+b {
+  font-weight: $text-wt-bold;
+}
+
+.text-wt- {
+  
+  &extralight {
+    font-weight: $text-wt-extralight;
+  }
+
+  &light {
+    font-weight: $text-wt-light;
+  }
+
+  &regular {
+    font-weight: $text-wt-regular;
+  }
+
+  &semibold {
+    font-weight: $text-wt-semibold;
+  }
+
+  &bold {
+    font-weight: $text-wt-bold;
+  }
+
+  &xbold {
+    font-weight: $text-wt-xbold;
+  }
+
+  &black {
+    font-weight: $text-wt-black;
+  }
+}

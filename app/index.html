@@ -30,144 +30,100 @@
     <!-- endbuild -->
   </head>
   <body>
-    <!--[if lt IE 10]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
     <div id="landing" class="main-container">
-      <header class="header--trans">
-        <nav role="navigation" class="grid grid--row nav--dark max-container">
-          <div id="name-title" class="stretch-three shift-right-one">
-            <a href="/">
+      <header class="header--main header--main-white">
+        <nav id="toggle" class="stretch-full pad-l-two pad-r-two">
+          <div id="nav--scroll" class="nav content-container">
+            <a id="nav--name-title" href="/">
               <span>Zach Freed</span>
-              <span class="text--gray-3">Designer</span>
+              <span>Designer</span>
             </a>
+            <button id="menu-toggle" class="whopper"><i class="icon ion-navicon-round"></i></button>
           </div>
-          <div class="grid--row stretch-eight nav--control">
-            <form class="show-me-nav">
-              <input type="checkbox" required/>
-              <span></span>
-              <span></span>
-            </form>
-            <ul class="nav--container pad-left-two">
-              <!-- Not ready yet
-              <li><a href="/about">About</a></li>
-              -->
-              <li><a href="/work/">My Work</a></li>
-              <li><a target="_blank" href="https://1drv.ms/b/s!AiXwFLoNRqBChZAZU32f7tOA7A1FiQ">R&eacute;sum&eacute;</a></li>
-              <!-- Not ready yet
-              <li><a href="#">Blog</a></li>
-              -->
-              <li class="last"><a href="/contact/">Find Me</a></li>
-              <div class="nav--social">
-                <a target="_blank" href="https://www.linkedin.com/in/zpfreed/">LinkedIn</a>
-                <a target="_blank" href="https://dribbble.com/ponchofreedo">Dribbble</a>
-                <a target="_blank" href="https://github.com/ponchofreedo">GitHub</a>
-                <a target="_blank" href="https://www.behance.net/ponchofreedo">Behance</a>
-                <a target="_blank" href="https://www.instagram.com/ponchofreedo/">Instagram</a>
-                <a target="_blank" href="https://twitter.com/ponchofreedo">Twitter</a>
-              </div>
+          <div id="nav-pullout--trigger" class="nav-links--container">
+            <ul class="nav-links--main">
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="/about/">About</a></li>
+              <li><a href="/work/">Projects</a></li>
+              <li><a href="/pdf/zpf_resume_17.pdf">R&eacute;sum&eacute;</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/contact/">Find Me</a></li>
+            </ul>
+            <ul class="nav-links--social">
+              <li><a target="_blank" href="https://www.linkedin.com/in/zpfreed/">LinkedIn</a></li>
+              <li><a target="_blank" href="https://dribbble.com/ponchofreedo">Dribbble</a></li>
+              <li><a target="_blank" href="https://github.com/ponchofreedo">GitHub</a></li>
+              <li><a target="_blank" href="https://www.behance.net/ponchofreedo">B&#275;hance</a></li>
+              <li><a target="_blank" href="https://twitter.com/ponchofreedo">Twitter</a></li>
+              <li><a target="_blank" href="https://www.instagram.com/ponchofreedo/">Instagram</a></li>
             </ul>
           </div>
         </nav>
       </header>
-      <section id="landing--main--hero" class="grid grid--row max-container">
-        <div class="stretch-three shift-right-one">
-          <div class="bottom-out pos--abs resume go-away-mobile">
-            <a target="_blank" href="https://1drv.ms/b/s!AiXwFLoNRqBChZAZU32f7tOA7A1FiQ">
-              View my R&eacute;sum&eacute; <i class="icon ion-arrow-right-c"></i>
-            </a>
-          </div>
-        </div>
-        <div class="grid--row stretch-eight pos--rel">
-          <div class="on-top stretch-full pad-left-two pad-right-one">
-            <h4 class="text--gray-1 on-top">I'm Zach Freed, a <b class="text--green-2">Designer</b> who embraces the chaos and the crazy.</h4>
-            <p class="text--gray-2">I enjoy working with passionate people who build functional, user-friendly solutions and enjoy having fun in the process. I strive to simplify experiences though clean design and by trying new techniques along the way...all with the goal of delivering seamless and meaningful experiences to the user, and delivering meaningful results to the team.</p>
-            <p class="next text--green-2">
-              <b>And I'm currently looking for a new gig.</b>
-            </p>
-          </div>
-          <div class="ghost pos--abs">
-            <h1 class="text--gray-5">'Sup.</h1>
-          </div>
-        </div>
-      </section>
-      <section id="landing--main--content" class="grid grid--row max-container pos--rel">
-        <div class="landing--main--content-section-titles stretch-three shift-right-one">
-          <div class="section--title title-top">
-            <span class="text--gray-3">Selected Works</span>
-          </div>
-          <div class="stretch-four pad-left-one section--title pos--abs title-bottom bottom-out title-link bg--gray-5 text--gray-2">
-            <a href="#">See all Projects <i class="icon ion-arrow-right-c forward"></i></a>
-          </div>
-        </div>
-        <div class="grid--row stretch-eight">
-          <article>
-            <a href="#" class="stretch-full">
-              <div class="pos--rel pad-left-two pad-right-two">
-                <h5 class="text--gray-1 on-top">Priceline Email Design System</h5>
-                <p class="text--gray-2 on-top">Created the rules and styles for a more modern email marketing program for a major .com company, and then developed it into a fully compliant and modular HTML/CSS library.</p>
-                <button class="stroked border--gray-5">View Project <i class="icon ion-arrow-right-c forward"></i></button>
-                <div class="ghost pos--abs go-away-mobile">
-                  <h2>Priceline Email Design System</h2>
-                </div>
+      <section class="main--content stretch-full pad-l-two pad-r-two">
+        <div class="content-container">
+          <header class="hero--main hero--main-landing">
+            <div class="pos--rel">
+              <h1 class="behind text--gray-5">'Sup.</h1>
+              <div class="in-front pos--rel">
+                <h4 class="text--gray-1">I'm a <b class="text--green-2">Designer</b> who embraces the chaos and the crazy.</h4>
+                <p>You can find me living somewhere between the pixels, code, and the organized chaos of bringing them together to build functional, user-friendly solutions. Above all, I enjoy building really cool projects with really cool tech, and especially with really cool people.</p>
+                <p><b>And I'm currently looking for a new gig.</b></p>
               </div>
+            </div>
+          </header>
+          <h6 class="section--header-small text--gray-3">Selected Work</h6>
+          <article class="project--container project--content project--content-white">
+            <a target="_blank" href="http://stimpleton.zachfreed.com">
+              <header>
+                <h2>stimpleton.</h2>
+                <h5 class="pos--rel">stimpleton.</h5>
+              </header>
+              <p class="pos--rel">A super simple and fully customizable design system built with Sass. An on-going project to fiddle with in Github and my first attempt at publishing an open-source repo.</p>
+              <button class="button--green button--stroked border--gray-5 pos--rel">View Project <i class="icon ion-arrow-right-c forward"></i></button>
             </a>
           </article>
-          <article>
-            <a href="#" class="stretch-full">
-              <div class="pos--rel pad-left-two pad-right-two">
-                <h5 class="text--gray-1 on-top">PCLN TM: Offer Confirmation</h5>
-                <p class="text--gray-2 on-top">Rebuilt and jumpstarted the refresh of the customer’s post-transactional inbox experience with priceline.com.</p>
-                <button class="stroked border--gray-5">View Project <i class="icon ion-arrow-right-c forward"></i></button>
-                <div class="ghost pos--abs go-away-mobile">
-                  <h2>PCLN TM: Offer Confirmation</h2>
-                </div>
-              </div>
+          <article class="project--container project--content project--content-white">
+            <a href="/work/archer/">
+              <header class="header--project-inline">
+                <h2>Archer</h2>
+                <h5 class="pos--rel">Archer</h5>
+              </header>
+              <p class="pos--rel">Helped replace an overly-complicated promotional email platform and deploy process. Built a new and shiny UI, conceptualized and prototyped new features, and created a more user-friendly way to manage the daily promotional email send process.</p>
+              <button class="button--green button--stroked border--gray-5 pos--rel">View Project <i class="icon ion-arrow-right-c forward"></i></button>
             </a>
           </article>
-          <article>
-            <a href="#" class="stretch-full">
-              <div class="pos--rel pad-left-two pad-right-two">
-                <span class="project--ip text--orange">In Progress</span>
-                <h5 class="text--gray-1 on-top">SpoGee</h5>
-                <p class="text--gray-2 on-top">Creating the brand and designing concepts for an app that wants to put a social spin on sports data and analytics.</p>
-                <button class="stroked border--gray-5">View Project <i class="icon ion-arrow-right-c forward"></i></button>
-                <div class="ghost pos--abs go-away-mobile">
-                  <h2>SpoGee</h2>
-                </div>
-              </div>
+          <article class="project--container project--content project--content-white">
+            <a href="/work/ionyc/">
+              <header class="header--project-inline">
+                <h2>io.NYC</h2>
+                <span class="text--purple-2 pos--abs">In Progress</span>
+                <h5 class="pos--rel">io.NYC</h5>
+              </header>
+              <p class="pos--rel">Working with a new makerspace out of NYC. Developing a proper brand, a new site, and also helping with some marketing of their new space in Astoria.</p>
+              <button class="button--green button--stroked border--gray-5 pos--rel">View Project <i class="icon ion-arrow-right-c forward"></i></button>
             </a>
           </article>
         </div>
       </section>
-      <footer class="footer--landing">
-        <div class="footer--container bright">
-          <div class="grid grid--row max-container pos--rel">
-            <div class="ghost shift-right-one pos--abs">
-              <h3>Talk to me, Goose.</h3>
-            </div>
-            <div class="stretch-six shift-right-one">
-              <p class="text--gray-6">I’m working on the whole “bat signal” thing, but the IKEA instructions are sometimes confusing and I think I’m missing a wooden peg. So until that’s ready, here are some places you can find me, or just <a href="mailto:zach.freed@gmail.com?subject=sup" class="footer--inline-link">drop me a line</a>.</p>
-            </div>
-            <ul class="stretch-four shift-right-one">
-              <li class="stretch-four shift-right-one"><a href="https://www.linkedin.com/in/zpfreed/">LinkedIn</a></li>
-              <li class="stretch-four shift-right-one"><a href="https://www.dribbble.com/ponchofreedo">Dribbble</a></li>
-              <li class="stretch-four shift-right-one"><a href="https://www.github.com/ponchofreedo">GitHub</a></li>
-              <li class="stretch-four shift-right-one"><a href="https://www.behance.net/ponchofreedo">Behance</a></li>
-              <li class="stretch-four shift-right-one"><a href="https://www.instagram.com/ponchofreedo">Instagram</a></li>
-              <li class="stretch-four shift-right-one"><a href="https://www.twitter.com/ponchofreedo">Twitter</a></li>
+      <footer class="footer--main footer--main-green">
+        <div class="stretch-full pad-l-two pad-r-two">
+          <div class="content-container pos--rel">
+            <h3>Talk to me, Goose.</h3>
+            <p>I’m actually pretty easy to find on the interweb. I’m working on the whole “bat signal” thing, but the IKEA insructions are sometimes confusing and I think I’m missing a wooden peg. So until that’s ready, here are some places you can find me, or just <a target="_blank" href="mailto:zach.freed@gmail.com?subject=sup">drop me a line</a>.</p>
+            <ul class="nav-links--social">
+              <li><a target="_blank" href="https://www.linkedin.com/in/zpfreed/">LinkedIn</a></li>
+              <li><a target="_blank" href="https://dribbble.com/ponchofreedo">Dribbble</a></li>
+              <li><a target="_blank" href="https://github.com/ponchofreedo">GitHub</a></li>
+              <li><a target="_blank" href="https://www.behance.net/ponchofreedo">B&#275;hance</a></li>
+              <li><a target="_blank" href="https://twitter.com/ponchofreedo">Twitter</a></li>
+              <li><a target="_blank" href="https://www.instagram.com/ponchofreedo/">Instagram</a></li>
             </ul>
-            <div class="copyright shift-right-one">
-              <span>&copy; Zach Freed 2017. All Rights Reserved.</span>
-            </div>
+            <span>&copy; Zach Freed. All rights reserved.</span>
           </div>
         </div>
       </footer>
-      <!--<ul class="barcode go-away-mobile">
-        <li class="big-bar stretch-four "></li>
-        <li class="little-bar"></li>
-      </ul>-->
+      <div class="barcode little-bar bg--green-2"></div>
     </div>
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -175,7 +131,7 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <!--<script src="/bower_components/jquery/dist/jquery.js"></script>-->
     <!-- endbower -->
     <!-- endbuild -->
     
