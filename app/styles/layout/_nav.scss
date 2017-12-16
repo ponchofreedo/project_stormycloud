@@ -6,6 +6,7 @@ nav {
   	user-select: none;
 	justify-content: space-between;
 	z-index: 50;
+	background-color: none;
 	dl,
 	ol,
 	ul {
@@ -23,6 +24,11 @@ nav {
 			padding-bottom: 0.6em;
 			&.last {
 				margin-right: 0;
+			}
+			&.active {
+				a {
+					border-bottom-color: inherit;
+				}
 			}
 			a {
 				display: block;

@@ -30,7 +30,7 @@
 		}
 	}
 	#landing--main--hero {
-		padding-top: 24em;
+		padding-top: 20em;
 		@include respond(all-phones) {
 			padding-top: 12em;
 			padding-left: 1.6em;
@@ -78,41 +78,6 @@
 			color: $green-2;
 		}
 	}
-	#landing--inner--hero {
-		padding-top: 24em;
-		@include respond(all-phones) {
-			padding-top: 12em;
-			padding-left: 1.6em;
-			padding-right: 1.6em;
-			h4 {
-				margin-top: 1em;
-			}
-		}
-		.ghost {
-			vertical-align: bottom;
-			bottom: -1.12em;
-			z-index: -10;
-			overflow: hidden;
-			@include respond(all-phones) {
-				top: 2.08em;
-				left: 0;
-				padding-bottom: 1em;
-				overflow-x: hidden;
-				display: block;
-				width: 10000px;
-			}
-		}
-		p {
-			padding-bottom: 2em;
-			letter-spacing: -0.24px;
-			@include respond(all-phones) {
-				padding-top: 1em;
-			}
-		}
-		a {
-			color: $black;
-		}
-	}
 	#landing--main--content {
 		padding: 32em 0 0;
 		.landing--main--content-section-titles {
@@ -127,19 +92,14 @@
 		}
 		article {
 			display: inline-block;
-			margin-bottom: 16em;
 			&:first-of-type {
 				margin-top: -4.8em;
-			}
-			@include respond(all-phones) {
-				margin-bottom: 8em;
 			}
 			a {
 				background-color: transparent;
 				display: block;
 				cursor: default;
-				padding-top: 4.8em;
-				padding-bottom: 3.2em;
+				padding: 7.2em 0 6.4em;
 				&:hover {
 					background-color: $green-2;
 					h2,
@@ -157,7 +117,7 @@
 					}
 				}
 				@include respond(all-phones) {
-					padding: 3.2em 1.6em;
+					padding: 4.8em 1.6em 4em;
 				}
 			}
 			h2 {
@@ -242,9 +202,157 @@
 			}
 		}
 	}
+	#landing--inner--hero {
+		padding-top: 24em;
+		padding-bottom: 4em;
+		@include respond(all-phones) {
+			padding-top: 12em;
+			padding-left: 1.6em;
+			padding-right: 1.6em;
+			padding-bottom: 1.6em;
+			h4 {
+				margin-top: 1em;
+			}
+		}
+		.ghost {
+			vertical-align: bottom;
+			bottom: -1.12em;
+			z-index: -10;
+			overflow: hidden;
+			@include respond(all-phones) {
+				top: 2.08em;
+				left: 0;
+				padding-bottom: 1em;
+				overflow-x: hidden;
+				display: block;
+				width: 10000px;
+			}
+		}
+		p {
+			padding-bottom: 2em;
+			letter-spacing: -0.24px;
+			@include respond(all-phones) {
+				padding-top: 1em;
+			}
+		}
+		a {
+			color: $black;
+		}
+	}
+	#landing--inner--content {
+		padding: 12em 0 0;
+		.flex {
+		}
+		article {
+			display: inline-block;
+			&:nth-child(odd) {
+			}
+			a {
+				background-color: transparent;
+				display: block;
+				cursor: default;
+				padding-top: 6.4em;
+				padding-bottom: 5.6em;
+				&:hover {
+					background-color: $green-2;
+					h2,
+					h5,
+					p {
+						color: $white;
+					}
+					.project--ip {
+						color: $green-1;
+					}
+					button {
+						border-color: $white;
+						background-color: transparent;
+						color: $white;
+					}
+				}
+				@include respond(all-phones) {
+					padding: 4.8em 1.6em;
+				}
+			}
+			h2 {
+				color: $gray-5;
+				background: linear-gradient(to right, $gray-5, $white, $white 30%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+			h5 {
+				margin-bottom: 1em;
+			}
+			button {
+				margin-top: 3.2em;
+				margin-left: -2.4em;
+				color: $green-2;
+				font-weight: $bold;
+				transition: 0.16s ease;
+				&:hover {
+					transform: translateX(2.4em);
+					border-color: transparent;
+					background-color: $white;
+					i {
+
+					}
+				}
+				@include respond(all-phones) {
+					margin-left: 0;
+					&:hover {
+						transform: none;
+						border-color: inherit;
+						background-color: inherit;
+					}
+				}
+			}
+			span {
+				&.project--ip {
+					position: absolute;
+					font-size: $smaller-type;
+					font-weight: $xbold;
+					letter-spacing: -0.8px;
+					top: 2.4em;
+					@include respond(all-phones) {
+						top: 1.6em;
+					}
+				}
+			}
+			&:last-child {
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+		}
+		.section--title {
+			&.title-link {
+				@include transition(background-color, 0.16s, ease);
+				font-size: 14px;
+				&:hover {
+					background-color: $gray-1;
+					color: $white;
+				}
+				a {
+					&:hover {
+						i {
+							transform: translateX(8px);
+						}
+					}
+				}
+				@include respond(all-phones) {
+					font-size: 2.4em;
+					font-weight: $xbold;
+					background-color: transparent;
+					&:hover {
+						color: inherit;
+						background-color: transparent;
+					}
+				}
+			}
+		}
+	}
 	#landing--main--hero,
+	#landing--main-content,
 	#landing--inner--hero,
-	#landing--main-content {
+	#landing--inner--content {
 		position: relative;
 	}
 	@include respond(super-desktop) {

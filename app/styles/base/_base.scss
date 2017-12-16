@@ -28,7 +28,7 @@ html {
 body {
   background: $white;
   font-family: $aktiv;
-  @include color($black, color);
+  color: $black;
   font-size: 1em;
   line-height: 1.4;
   font-weight: $regular;
