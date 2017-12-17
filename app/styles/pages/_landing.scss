@@ -1,36 +1,27 @@
 // bower:scss
 // endbower
 
-#landing {
+.barcode {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100%;
+	z-index: 999;
 
-	header,
-	section,
-	footer {
-		display: block;
+	@include respond(tablet) {
+		left: 0;
+		height: 0.8rem;
 	}
 
-	.barcode {
-		position: fixed;
-		top: 0;
-		right: 0;
-		height: 100%;
-		z-index: 999;
+	@include respond(tablet) {
+		height: 0.4rem;
+	}
+
+	&.little-bar {
+		width: 0.8rem;
 
 		@include respond(tablet) {
-			left: 0;
-			height: 0.8rem;
-		}
-
-		@include respond(tablet) {
-			height: 0.4rem;
-		}
-
-		&.little-bar {
-			width: 0.8rem;
-
-			@include respond(tablet) {
-				width: 100%;
-			}
+			width: 100%;
 		}
 	}
 }

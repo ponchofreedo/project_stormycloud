@@ -1,35 +1,5 @@
 console.log('gold team rules!');
 
-/*
-// change background color after scrolling
-// define basic variables
-var scrollPos = window.scrollY;
-var header = document.getElementById('nav-main--scroll');
-
-// add scroll class function
-function addScrollClass() {
-    header.classList.add('nav-main--scroll');
-}
-
-// remove scroll class function
-function removeScrollClass() {
-    header.classList.remove('nav-main--scroll');
-}
-
-// trigger the scroll class function
-window.addEventListener('scroll', function(){ 
-    scrollPos = window.scrollY;
-    if(scrollPos > 96){
-        addScrollClass();
-    }
-    else {
-        removeScrollClass();
-    }
-    // uncomment only for debugging
-    //console.log(scrollPos);
-});
-*/
-
 window.onscroll = function scrollChangeHeaderBg(){
     var header = document.getElementsByTagName('header')[0];
     var sectionHeader = document.getElementsByTagName('header')[1];
