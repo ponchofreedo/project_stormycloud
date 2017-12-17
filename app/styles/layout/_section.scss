@@ -247,3 +247,42 @@
 		}
 	}
 }
+
+.hero--inner {
+	display: block;
+	padding-top: 16rem;
+	margin-bottom: 24rem;
+
+	@include respond(tablet) {
+		padding-top: 12rem;
+		margin-bottom: 16rem;
+	}
+
+	@include respond(phone) {
+		padding-top: 8rem;
+		margin-bottom: 8rem;
+	}
+
+	header {
+		
+		@include respond(tablet) {
+			padding-left: ((1 / 12) * 100) + %!important;
+			padding-right: ((1 / 12) * 100) + %!important;
+		}
+
+		p {
+			color: $white;
+			padding-bottom: 8rem;
+			font-size: $text-sz-h-small;
+
+			@include respond(tablet) {
+				padding-bottom: 6.4rem;
+				font-size: $text-sz-body;
+			}
+
+			a {
+				color: $black;
+			}
+		}
+	}
+}
